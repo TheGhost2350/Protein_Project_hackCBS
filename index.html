@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ProteinProject</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="heading"><span id="the">The</span>ProteinProject</div>
+      <div class="nav-btn">
+        <button
+          type="button"
+          data-theme-toggle
+          aria-label="Change to light theme"
+        >
+          Change to light theme
+        </button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="grid">
+        <form action="">
+          <fieldset>
+            <legend>Filter brands</legend>
+            <div id="container">
+              <div class="form__group">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_1b"
+                    value="0"
+                    name="brands"
+                    checked
+                  />
+                  <label for="berries_1b"><b>All</b></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="3"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Sonic</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="6"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Dairy Queen</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="1"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Mcdonalds</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="4"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Arbys</label>
+                </div>
+              </div>
+              <div class="form__group">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="7"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Subway</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_3b"
+                    value="2"
+                    name="brands"
+                  />
+                  <label for="berries_3b">Chick Fil-A</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="5"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Burger King</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="berries_2b"
+                    value="8"
+                    name="brands"
+                  />
+                  <label for="berries_2b">Taco Bell</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Filter Preferences</legend>
+            <div id="pref_veg">
+              <input type="radio" id="pref_1" value="0" name="pref" checked />
+              <label for="delivery_1b">Any</label>
+              <input type="radio" id="pref_2" value="1" name="pref" />
+              <label for="delivery_2b">Veg</label>
+              <input type="radio" id="pref_3" value="2" name="pref" />
+              <label for="delivery_2b">Non-veg</label>
+            </div>
+          </fieldset>
+
+          <div class="form__group">
+            <label for="range_b"><b>Max Calories ?</b></label>
+            <input
+              type="range"
+              min="300"
+              step="25"
+              max="1700"
+              value="800"
+              id="range_cal"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output><b>800</b></output>
+          </div>
+          <button type="submit" id="submit">submit</button>
+          <span id="result"
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span id="resVal"></span
+          ></span>
+        </form>
+        <div id="data">
+          <table id="dataTable"></table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
