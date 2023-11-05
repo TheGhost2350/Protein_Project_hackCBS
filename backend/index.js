@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 const child_process = require("child_process").spawn;
-const PORT = 3001; // You can change this to any desired port
+const PORT = process.env.PORT || 3001; // You can change this to any desired port
 
 // app.use(express.static("public"));
 
